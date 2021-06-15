@@ -29,9 +29,9 @@ startBtn.addEventListener('click', () => {
         intervalId = setInterval(() => {
             {
                 const currentColor =colors[randomIntegerFromInterval(min, max)];
+                changeBackground(currentColor);
                 console.log(randomIntegerFromInterval(min, max));
                 console.log(currentColor);
-                changeBackground(currentColor);
             }
         }, 1000);
 });

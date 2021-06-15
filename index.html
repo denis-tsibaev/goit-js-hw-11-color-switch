@@ -13,15 +13,29 @@
 
 		button {
 			font-size: 40px;
+			text-transform: uppercase;
 			padding: 20px 30px;
+			border-radius: 5%;
+			color: lightgreen;
+			background-color: gray;
+		}
+
+		.container {
+			width: 100vh;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: auto;
 		}
 	</style>
 </head>
 
 <body>
-
-	<button type="button" data-action="start">Start</button>
-	<button type="button" data-action="stop">Stop</button>
+	<div class="container">
+		<button type="button" data-action="start">Start</button>
+		<button type="button" data-action="stop">Stop</button>
+	</div>
 
 
 	<script src="./main.js" type="module"></script>
