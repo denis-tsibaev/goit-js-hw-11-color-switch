@@ -19,8 +19,8 @@ const randomIntegerFromInterval = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
-const startBtn = document.querySelector('.start');
-const stopBtn = document.querySelector('.stop');
+const startBtn = document.querySelector('[data-action="start"]');
+const stopBtn = document.querySelector('[data-action="stop"]');
 
 let intervalId = null;
 
@@ -28,8 +28,7 @@ startBtn.addEventListener('click', () => {
     if (intervalId === null)
         intervalId = setInterval(() => {
             {
-                const currentColor =
-                colors[randomIntegerFromInterval(min, max)];
+                const currentColor =colors[randomIntegerFromInterval(min, max)];
                 console.log(randomIntegerFromInterval(min, max));
                 console.log(currentColor);
                 changeBackground(currentColor);
@@ -43,4 +42,5 @@ function changeBackground(color) {
 
 stopBtn.addEventListener('click', () => {
     clearInterval(intervalId);
+	intervalId = null;
 });
